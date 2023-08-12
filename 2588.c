@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+// 백준 2588번 세 자리수 곱셈
+
 void main(){
     int a, b[3];
 
