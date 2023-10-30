@@ -1,23 +1,26 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
-int main(){
+int main() {
 	string sentence;
 
 	cin >> sentence;
 
-	string alphabet[7] = {"c=", "c-", "d-", "lj", " nj", "s=", "z="};
+	string alphabet[7] = { "c=", "c-", "d-", "lj", " nj", "s=", "z=" };
 	string alphabet2 = "dz=";
 
 	int count = 0;
-	for(int i=0; i < sentence.size(); i++){
-		for(int j = 0; j < 7; i++){
-			sentence[i] + sentence[i+1] == alphabet[i]
-			
+	
+	for (int j = 0; j < 7; j++) {
+		for (int i = 0; i < sentence.size() - 1; i++) {
+			if (sentence[i] == alphabet[j][0] && sentence[i + 1] == alphabet[j][1]) {
+				count++;
+			}
 		}
 	}
+	
+	cout << count;
 	return 0;
 }
