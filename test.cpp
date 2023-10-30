@@ -8,6 +8,11 @@ int main() {
 
 	cin >> sentence;
 
+	if (sentence.length() == 1) {
+		cout << 1;
+		return 0;
+	}
+
 	string alphabet[7] = { "c=", "c-", "d-", "lj", "nj", "s=", "z=" };
 	string alphabet2 = "dz=";
 
@@ -25,7 +30,7 @@ int main() {
 			count++;
 		}
 	}
-
+	
 	cout << sentence.length() - count;
 	
 	return 0;
