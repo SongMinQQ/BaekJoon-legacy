@@ -27,5 +27,6 @@ int main() {
 	}
 
 	cout << sentence.length() - count;
+	
 	return 0;
 }
