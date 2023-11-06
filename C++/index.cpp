@@ -7,14 +7,16 @@ class Person {
     double weight;
     string name;
 public:
-    Person(int id , string name, double weight);
+    Person(int id = 1, string name = "Grace", double weight = 20.5);
     void show() {
         cout << id << ' ' << weight <<' ' << name << endl;
     }
 };
 
-Person::Person(int id = 1, string name = "Grace", double weight = 20.5){
-    
+Person::Person(int id , string name, double weight){
+    Person::id = id;
+    Person::name = name;
+    Person::weight = weight;
 }
 
 int main(){
