@@ -7,7 +7,7 @@ int main() {
 	cin >> a >> b;
 
 	int** arr = new int*[a];
-	int** arr2 = new int*[b];
+	int** arr2 = new int*[a];
 
 	for (int i = 0; i < a; i++) {
 		arr[i] = new int[b];
