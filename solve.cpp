@@ -3,24 +3,29 @@
 
 using namespace std;
 
-class Buffer {
-    string text;
+class Circle {
+    int radius;
 public:
-    Buffer(string text) { this->text = text; }
-    Buffer(const Buffer& s);
-    void add(string next) { text += next; }
-    void print() { cout << text << endl; }
+    Circle(int radius = 0){this->radius = radius;}
+    int getRadius() {return radius;}
+    void setRadius(int radius){this->radius=radius;}
+    double getArea() {return 3.14*radius*radius;};
+    
 };
 
-Buffer& append(Buffer& buf, string next) {
-    buf.add(next);
-    return buf;
+class NamedCircle : public Circle {
+    string name;
+public:
+    NamedCircle(int radius, string name);
+    void show();
+};
+NamedCircle::NamedCircle(int radius, string name):Circle(radius){
+    this->name = name;
 }
-
+void NamedCircle::show(){
+        cout << "반지름이 " << getRadius() <<'인'<< name;
+}
 int main() {
-    Buffer buf("Hello");
-    Buffer& temp = append(buf, "Guys");
-    temp.print();
-    buf.print();
-    return 0;
+    NamedCircle waffle(3,"waffle");
+
 }
