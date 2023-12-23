@@ -1,19 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(void){
-    int a[6] = {1,1,2,2,2,8};
-    int b[6];
-    for(int i = 0; i < 6; i++)
-        scanf("%d",&b[i]);
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
-    for(int i = 0; i < 6; i++){
-        int result = a[i] - b[i];
-        if(result >= 0){
-            printf("%d ",result);
-        }
-        else
-            printf("%d ",-(b[i]-a[i]));
-    }
-    
+int main(void) {
+    int a = 3, b = 4;
+    printf("%p", &a);
+    swap(&a, &b);
+
+    printf("%d %d\n", a, b);
     return 0;
-};
+}
