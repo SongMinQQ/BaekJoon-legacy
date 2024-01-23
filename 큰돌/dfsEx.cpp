@@ -41,7 +41,8 @@ void dfs(int y, int x, int **ajm){
                 findCount++;
                 return;
             }
-            continue;}
+            continue;
+        }
         if(ajm[ny][nx] != 1) {
             check++;
             if(check == 4){
