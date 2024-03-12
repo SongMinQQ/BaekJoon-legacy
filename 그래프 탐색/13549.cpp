@@ -13,11 +13,7 @@ int bfs(int n){
         // +1, -1, *2 방향으로 BFS 탐색
         for(int i : {now * 2, now - 1, now + 1 }){
             if(0 <= i && i <= MAX && visited[i] == -1){
-                if(i == now * 2){
-                    visited[i] = visited[now];
-                } else if (visited[i] == -1) {
-                    visited[i] = visited[now] + 1;
-                }
+                visited[i] = visited[now] + 1;
                 if(i == k) {return visited[k];}
                 q.push(i);
             }
