@@ -1,12 +1,5 @@
-x = int(input())
-
-if x >= 90:
-    print("A")
-elif x >= 80:
-    print("B")
-elif x >= 70:
-    print("C")
-elif x >= 60:
-    print("D")
-else  :
-    print("F")
+H,M = map(int,input().split())
+if M - 45 < 0 : 
+    print(H-1, 60-(45 - M))
+else : 
+    print(H, M - 45)
