@@ -51,20 +51,20 @@ int main(){
 	adj[2].push_back(4);
 	adj[2].push_back(5); 
 	int root = 1;
-    cout << "\n íŠ¸ë¦¬ìˆœíšŒ : postOrder \n";
+    cout << "\n Æ®¸®¼øÈ¸ : postOrder \n";
     postOrder(root); memset(visited, 0, sizeof(visited));
-    cout << "\n íŠ¸ë¦¬ìˆœíšŒ : preOrder \n"; 
+    cout << "\n Æ®¸®¼øÈ¸ : preOrder \n"; 
     preOrder(root); memset(visited, 0, sizeof(visited)); 
-    cout << "\n íŠ¸ë¦¬ìˆœíšŒ : inOrder \n"; 
+    cout << "\n Æ®¸®¼øÈ¸ : inOrder \n"; 
     inOrder(root); 
     return 0;
 }
 /*
- íŠ¸ë¦¬ìˆœíšŒ : postOrder
+ Æ®¸®¼øÈ¸ : postOrder
 4 5 2 3 1
- íŠ¸ë¦¬ìˆœíšŒ : preOrder
+ Æ®¸®¼øÈ¸ : preOrder
 1 2 4 5 3
- íŠ¸ë¦¬ìˆœíšŒ : inOrder
+ Æ®¸®¼øÈ¸ : inOrder
 4 2 5 1 3
 */
-//[ì¶œì²˜] [ì•Œê³ ë¦¬ì¦˜ ê°•ì˜] 2ì£¼ì°¨. ê·¸ë˜í”„ì´ë¡ , ì¸ì ‘í–‰ë ¬, ì¸ì ‘ë¦¬ìŠ¤íŠ¸, DFS, BFS, íŠ¸ë¦¬ìˆœíšŒ|ì‘ì„±ì í°ëŒ
+//[ÃâÃ³] [¾Ë°í¸®Áò °­ÀÇ] 2ÁÖÂ÷. ±×·¡ÇÁÀÌ·Ğ, ÀÎÁ¢Çà·Ä, ÀÎÁ¢¸®½ºÆ®, DFS, BFS, Æ®¸®¼øÈ¸|ÀÛ¼ºÀÚ Å«µ¹

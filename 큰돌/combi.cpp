@@ -7,7 +7,7 @@ void print(vector<int> b){
     cout << '\n';
 }
 void combi(int start, vector<int>b){
-    if(b.size() == k){
+    if(b.size() == 2){
         print(b);
         return;
     }
